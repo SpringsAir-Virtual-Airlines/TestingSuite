@@ -22,7 +22,7 @@ namespace SpaDL
         public List<userProfile> GetUsers()
         {
             List<userProfile> listOfUsers = new List<userProfile>();
-            string sqlQuery = "Select * from Users";
+            string sqlQuery = @"Select * from Users";
 
             using(SqlConnection con = new SqlConnection(_connectionStrings))
             {
