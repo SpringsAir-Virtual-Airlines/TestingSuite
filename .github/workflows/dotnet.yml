@@ -85,7 +85,7 @@ jobs:
       shell: pwsh
       run: |
           .\.sonar\scanner\dotnet-sonarscanner begin /k:"SpringsAir-Virtual-Airlines_TestingSuite" /o:"springsair-virtual-airlines" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.coverage.exclusions=**/SpaTestApi/wwwroot/lib/**,**/**SpaDL/*.cs,**/SpaTestApi/Controllers/*.cs /d:sonar.cs.opencover.reportsPaths="**/TestResults/**/coverage.opencover.xml" -d:sonar.vstest.reportsPath="**/TestResults/*.trx"
-          dotnet build ./BackEnd/SPATestApi -c Release
+          dotnet build ./SPATestApi -c Release
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
       
     # We are creating our publish folder for us to use
