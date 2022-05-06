@@ -2,7 +2,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\SpaModel\SpaModel.csproj" />
-
   </ItemGroup>
 
   <PropertyGroup>
