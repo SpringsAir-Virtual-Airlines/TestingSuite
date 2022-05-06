@@ -21,17 +21,17 @@ namespace SPATestApi.Controllers
         //=============================================//
 
         // GET: api/UsersApi/5
-        [HttpGet("GetUser")]
+        [HttpGet("GetUsers")]
         public IActionResult GetUsers()
         {
             try
             {
               return Ok(repo.GetUsers());
             }
-            catch (System.Exception)
+            catch (Exception ex)
             {
                 
-                throw new NotImplementedException("This is a working progress");
+                return StatusCode(422, ex.Message);
             }
         }
     }

@@ -22,5 +22,9 @@ namespace SpaModel
             get;
             set;
         }
+        public override string ToString()
+        {
+           return $"Id: {userId} \nName: {Name} \n Rank: {userRank} \n Roles: {Roles}";
+        }
     }
 }
