@@ -84,7 +84,7 @@ jobs:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       shell: pwsh
       run: |
-          .\.sonar\scanner\dotnet-sonarscanner begin /k:"SpringsAir-Virtual-Airlines/TestingSuite" /o:"SpringsAir-Virtual-Airlines" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.coverage.exclusions=**/SpaTestApi/wwwroot/lib/**,**/**SpaDL/*.cs,**/SpaTestApi/Controllers/*.cs /d:sonar.cs.opencover.reportsPaths="**/TestResults/**/coverage.opencover.xml" -d:sonar.vstest.reportsPath="**/TestResults/*.trx"
+          .\.sonar\scanner\dotnet-sonarscanner begin /k:"SpringsAir-Virtual-Airlines_TestingSuite" /o:"springsair-virtual-airlines" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.coverage.exclusions=**/SpaTestApi/wwwroot/lib/**,**/**SpaDL/*.cs,**/SpaTestApi/Controllers/*.cs /d:sonar.cs.opencover.reportsPaths="**/TestResults/**/coverage.opencover.xml" -d:sonar.vstest.reportsPath="**/TestResults/*.trx"
           dotnet build ./SpaTestApi -c Release
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
       
