@@ -92,11 +92,11 @@ jobs:
     - name: Create Publish folder
       run: dotnet publish -c Release -o publish
       
-#     # Deploying our app to our Azure Webapp
-#     - name: Deploy
-#       uses: azure/webapps-deploy@v2
-#       with:
-#         app-name: SpringsAirTests
-#         slot-name: 'Production'
-#         publish-profile: $${{secrets.AZURE_WEBAPP_PUBLISH_PROFILE}}
-#         package: BackEnd\publish\
+    # Deploying our app to our Azure Webapp
+    - name: Deploy
+      uses: azure/webapps-deploy@v2
+      with:
+        app-name: SpringsAirTests
+        slot-name: 'Production'
+        publish-profile: $${{secrets.AZURE_WEBAPP_PUBLISH_PROFILE}}
+        package: BackEnd\publish\
