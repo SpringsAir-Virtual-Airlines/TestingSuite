@@ -99,4 +99,4 @@ jobs:
         app-name: SpringsAirTests
         slot-name: 'Production'
         publish-profile: $${{secrets.AZURE_WEBAPP_PUBLISH_PROFILE}}
-        package: TestingSuite\BackEnd\SPATestApi\publish\
+        package: BackEnd\publish\
